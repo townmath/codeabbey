@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="lucky"></p>
+    <!-- help from https://www.w3schools.com/JS/js_random.asp 
+    and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/-->
+    <script>
+    let paramString = urlString.split('?')[1];
+    let queryString = new URLSearchParams(paramString);
+    let outString = "";
+    for (let pair of queryString.entries()) {
+      outString+="Key is: " + pair[0];
+      outString+="Value is: " + pair[1];
+    }
+    document.getElementById("lucky").innerHTML = outString;
+    //"Random value is " + 1621*(Math.floor(Math.random() * 100)+10);
+    </script> 
+</body>
+</html>

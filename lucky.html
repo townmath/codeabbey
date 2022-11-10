@@ -8,11 +8,19 @@
         let urlString = window.location.search;
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
-        let outString = "";
-        for (let pair of queryString.entries()) {
-            outString+="Key is: " + pair[0];
-            outString+="Value is: " + pair[1];
-        }
+        let outString = "Your lucky day is ";
+        let name=queryString.get('name');
+        let month=queryString.get('month');
+        let year=queryString.get('year');
+        let day=queryString.get('day');
+        //for (let pair of queryString.entries()) {
+        //    outString+="Key is: " + pair[0];
+        //    outString+="Value is: " + pair[1];
+       // }
+        let A=27;
+        let B=43;
+        let C=18;
+        lucky = (length(name) * A + month * B + day * C + year) % 31 + 1
         document.getElementById("lucky").innerHTML = outString;
     //"Random value is " + 1621*(Math.floor(Math.random() * 100)+10);
     </script> 

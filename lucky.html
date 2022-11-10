@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <p>Your lucky day is </p><p id="lucky"></p>
+    <p id="lucky">Your lucky day is </p>
     <!-- help from https://www.w3schools.com/JS/js_random.asp 
     and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/-->
     <script>
@@ -17,9 +17,9 @@
         //    outString+="Key is: " + pair[0];
         //    outString+="Value is: " + pair[1];
        // }
-        let A=25;
+        let A=37;
         let B=43;
-        let C=13;
+        let C=16;
         lucky = (name.length * A + month * B + day * C + year) % 31 + 1;
         document.getElementById("lucky").innerHTML = outString+lucky;
     //"Random value is " + 1621*(Math.floor(Math.random() * 100)+10);

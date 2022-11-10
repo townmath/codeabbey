@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <p id="lucky"></p>
+    <p>Your lucky day is </p><p id="lucky"></p>
     <!-- help from https://www.w3schools.com/JS/js_random.asp 
     and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/-->
     <script>
         let urlString = window.location.search;
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
-        let outString = "Your lucky day is ";
+        let outString = "";//Your lucky day is ";
         let name=queryString.get('name');
         let month=Number(queryString.get('month'));
         let year=Number(queryString.get('year'));

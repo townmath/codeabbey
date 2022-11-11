@@ -9,9 +9,7 @@
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
         let name=queryString.get('name');
-        if (name==null){
-            alert("No name");
-        }
+        let kill=queryString.get('kill');
         function loadFile(filePath) {
           var result = null;
           var xmlhttp = new XMLHttpRequest();
@@ -26,7 +24,13 @@
         var contents = loadFile("employees.txt");
         //alert(myStuff);
         var arr = contents.split(/\r?\n/);
-        //alert(arr);
+        if (kill==null){
+            alert("kill");
+        }
+        else if (name!=null){
+            //alert(arr);
+            arr.push(name);
+        }
         var text = "<ul>";
         for (let i = 0; i < arr.length; i++) {
             text += "<li>"+arr[i] + "</li>";

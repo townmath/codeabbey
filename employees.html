@@ -24,8 +24,9 @@
         var contents = loadFile("employees.txt");
         //alert(myStuff);
         var arr = contents.split(/\r?\n/);
-        if (kill==null){
+        if (kill!=null){
             alert("kill");
+            arr.length=1; //erase all but founder
         }
         else if (name!=null){
             //alert(arr);

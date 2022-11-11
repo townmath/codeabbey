@@ -9,7 +9,7 @@
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
         let name=queryString.get('name');
-        if (name.length==0){
+        if (name==null){
             alert("No name");
         }
         function loadFile(filePath) {

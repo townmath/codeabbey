@@ -3,7 +3,8 @@
 <body>
     <p id=employees></p>
     <!-- help from https://www.w3schools.com/JS/js_random.asp
-    and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/-->
+    and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/
+    and https://sealevel.info/test_file_read.html-->
     <script>
         let urlString = window.location.search;
         let paramString = urlString.split('?')[1];
@@ -24,6 +25,7 @@
         var contents = loadFile("employees.txt");
         //alert(myStuff);
         var arr = contents.split(/\r?\n/);
+        arr.length=arr.length-1;
         if (kill!=null){
             alert("kill");
             arr.length=1; //erase all but founder

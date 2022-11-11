@@ -5,6 +5,10 @@
     <!-- help from https://www.w3schools.com/JS/js_random.asp
     and https://www.geeksforgeeks.org/how-to-get-url-parameters-using-javascript/-->
     <script>
+        let name=queryString.get('name');
+        if (name.length==0){
+            alert("No name");
+        }
         function loadFile(filePath) {
           var result = null;
           var xmlhttp = new XMLHttpRequest();
